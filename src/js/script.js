@@ -29,3 +29,25 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         smoothScrollTo(this.getAttribute('href'));
     });
 });
+
+function nextSlide(button) {
+    let carousel = button.parentElement;
+    let images = carousel.querySelectorAll('.carousel-image');
+    let currentIndex = Array.from(images).findIndex(image => image.classList.contains('active'));
+    
+    images[currentIndex].classList.remove('active');
+    
+    let nextIndex = (currentIndex + 1) % images.length;
+    images[nextIndex].classList.add('active');
+}
+
+function prevSlide(button) {
+    let carousel = button.parentElement;
+    let images = carousel.querySelectorAll('.carousel-image');
+    let currentIndex = Array.from(images).findIndex(image => image.classList.contains('active'));
+    
+    images[currentIndex].classList.remove('active');
+    
+    let prevIndex = (currentIndex - 1 + images.length) % images.length;
+    images[prevIndex].classList.add('active');
+}

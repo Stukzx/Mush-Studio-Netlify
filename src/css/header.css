@@ -12,19 +12,42 @@ header {
     color: white;
     padding: 1px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;  /* MantÃ©m o header fixo no topo */
+    width: 100%;  /* Faz com que o header ocupe toda a largura da tela */
+    top: 0;  /* Posiciona o header no topo da pÃ¡gina */
+    left: 0;  /* Garante que o header comece do lado esquerdo da tela */
+    z-index: 1000;  /* Garante que o header esteja sempre acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Adiciona uma sombra para destacÃ¡-lo */
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+/*header #logo {
+    margin-right: 20px;
+    color: white;
+    text-transform: uppercase;
+    transition: 200ms;
+    cursor: pointer;  
+    padding-left: -100px;
+}
+header #logo:hover {
+    margin-right: 20px;
+    color: white;
+    text-transform: uppercase;
+    transition: 200ms;
+    transform: scale(1.05);
+    cursor: pointer;
+}*/
+
+header nav{
+        background-color: #00030b;
+    color: white;
+    padding: 1px 20px;
     display: flex;
     align-items: center;
-}
-
-header .logo img {
-    margin-right: 25px; /* Ajuste para criar uma distância de 25px entre a imagem e o texto */
+    justify-content: center;
 }
 
 header nav ul {
@@ -32,6 +55,10 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
 header nav ul li {
@@ -39,7 +66,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-decoration: none;
     transition: 200ms;
@@ -48,6 +75,4 @@ header nav ul li a:hover{
     color: rgb(255, 0, 0);
     text-decoration: none;
 }
-
-
 

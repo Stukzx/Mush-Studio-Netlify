@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <title>Mush Studio - Inovação em Criação de Jogos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<! INICIO DAS TAGS DE LINK>
 
     <meta name="description" content="Mush Studio, onde a inovação encontra a criatividade na criação de jogos. Explore nossos projetos e mergulhe em mundos únicos e imersivos.">
 
@@ -10,22 +12,24 @@
     <meta property="og:description" content="Descubra o portfólio da Mush Studio e experimente nossos jogos!.">
     <meta property="og:url" content="https://www.mushstudio.xyz">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="Stukzx/Mush-Studio-Netlify/img/mush.png">
+    <meta property="og:image" content="./img/mush.png">
 
     <meta name="twitter:title" content="Mush Studio - Inovação em Criação de Jogos">
     <meta name="twitter:description" content="Explore o universo criativo da Mush Studio com nossos jogos únicos e inovadores.">
-    <meta name="twitter:image" content="Stukzx/Mush-Studio-Netlify/img/mush.png">
+    <meta name="twitter:image" content="./img/mush.png">
     <meta name="twitter:card" content="summary_large_image">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<! FIM DAS TAGS DE LINK>
+
     <title>Mush Studio | Page</title>
     <link rel="stylesheet" href="./src/css/header.css">
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="icon" type="image/x-icon" href="./img/mush.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    
     <header>
-        <img src="./img/mushgif.gif" alt="">
+
         <nav>
             <ul>
                 <li><a href="#about">Sobre</a></li>
@@ -37,9 +41,14 @@
     </header>
 
     <section id="hero">
+        <img src="./img/mushgif.gif" id="logo">
         <h1>Bem-vindo à Mush Studio</h1>
         <p>oundrikandalahai</p>
-            <a id="bt-falso" href="#about">Saiba mais</a>
+    <nav>
+         <ul>
+            <li><a href="#about" id="bt-falso">Saiba-mais</a></li>
+        </ul>
+    </nav>
     </section>
 
     <section id="about">
@@ -48,16 +57,30 @@
     </section>
 
     <section id="games">
-        <h2>Nossos Jogos</h2>
-        <div class="game-list">
-            <div class="game-item">
-                <h3>Kaa - O Caminho da mata</h3>
-                <p>EM DESENVOLVIMENTO</p>
+        <div class="games-container">
+            <h2>Nossos Jogos</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <h3>Kaa - O Caminho da mata</h3>
+                    <div class="carousel">
+                        <img src="./img/img games/kaa1.png" class="carousel-image active" alt="Kaa - Imagem 1">
+                        <img src="./img/img games/kaa2.png" class="carousel-image" alt="Kaa - Imagem 2">
+                        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+                    </div>
+                    <p>EM DESENVOLVIMENTO</p>
+                </div>
+                <div class="game-item">
+                    <h3>Ikigai - O Caminho do despertar</h3>
+                    <div class="carousel">
+                        <img src="./img/img games/ikigai.png" class="carousel-image active" alt="Ikigai - Imagem 1">
+                        <img src="./img/img games/ikigai.png" class="carousel-image" alt="Ikigai - Imagem 2">
+                        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+                        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+                    </div>
+                    <p>EM DESENVOLVIMENTO</p>
+                </div>
             </div>
-            <div class="game-item">
-                <h3>Ikigai - O Caminho do despertar</h3>
-                <p>EM DESENVOLVIMENTO</p>            </div>
-
         </div>
     </section>
 
@@ -66,7 +89,7 @@
         <div class="team-list">
             <div class="team-item">
                 <h3>Elias Fonseca</h3>
-                <p>Fundando da Mush Studio, Programador e Coordenador Geral</p>
+                <p>Fundador da Mush Studio, Programador e Coordenador Geral</p>
             </div>
             <div class="team-item">
                 <h3>Gustavo Porto</h3>
@@ -74,7 +97,7 @@
             </div>
             <div class="team-item">
                 <h3>Felipe Motta</h3>
-                <p>Roteirista, Designer de personagens</p>
+                <p>Roteirista e Designer de personagens</p>
             </div>
             <div class="team-item">
                 <h3>Flávio Manke</h3>
@@ -85,8 +108,12 @@
 
 
     <section id="contact">
+        <div class="contato-container">
         <h2>Contato</h2>
         <p>Entre em contato conosco pelo e-mail: <a href="mailto:eliotykid@mushstudio.xyz">eliotykid@mushstudio.xyz</a></p>
+        <h2>Redes Sociais</h2>
+        <i class="fab fa-discord"><a href="https://discord.gg/dvKYfwY88s"></a></i><i class="fab fa-instagram"><a href="https://www.instagram.com/mush_studio_games/"></a></i><i class="fab fa-twitter"><a href="https://x.com/MushStudio43887"></a></i>
+    </div>
     </section>
 
     <footer>
@@ -94,5 +121,6 @@
     </footer>
 
     <script src="./src/js/script.js"></script>
+   
 </body>
 </html>

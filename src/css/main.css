@@ -9,11 +9,21 @@
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 160px 20px 100px; /* Aumentei o padding-top para dar espaÃ§o para o header fixo */
 }
 
+#hero img{
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    transition: 200ms;
+}
+#hero img:hover{
+    transform: scale(1.05);
+    height: auto;
+    margin: 0 auto;
+}
 #hero h1 {
-    align-self: center;
     font-size: 48px;
     margin: 0;
 }
@@ -25,37 +35,53 @@
 
 #bt-falso {
     background-color: #e74c3c;
-    border-radius: 50px;
+    border-radius: 10px;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    text-decoration: none;
     transition: 200ms;
+    text-decoration: none;
+}
+#bt-falso:hover {
+    background-color: #872e24;
+    border-radius: 12px;
+    color: rgb(210, 207, 207);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
 }
 
-#bt-falso:hover {
-    background-color: #3b120d;
+#hero nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 
 section {
     padding: 60px 20px;
 }
 
 #about{
-    
+    padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    height: 500px;
 }
 #about h2{
 
     width: 200px;
     height: 50px;
-    font-size: 24px;
+    font-size: 26px;
+    color: red;
+    text-shadow: black;
     text-align: center;
     margin-bottom: 10px;
     border-radius: 15px;
@@ -74,13 +100,18 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 600px;
+    height: 500px;
+    padding-bottom: 200px;
+}
+
+.games-container{
+    background-color: red;
     border-radius: 15px;
-    background-color: #6f3131;
+    width: 600px;
     padding: 20px;
 }
 
-#games h2{
+.games-container h2{
     color: rgb(255, 255, 255);
 }
 
@@ -119,6 +150,51 @@ section {
 
 }
 
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-image {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border: none;
+    border-radius: 15px;
+    user-select: none;
+    background-color: rgba(25, 25, 25, 0.361);
+}
+
+.next {
+    right: 0;
+    border-radius: 15px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 #team .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -150,13 +226,38 @@ section {
 }
 
 #contact{
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px ;
 }
-
+#contact i{
+    padding-right: 12px;
+    transition: 200ms;
+    cursor: pointer;
+    font-size: 20px;
+}
+#contact i:hover{
+    padding-right: 14px;
+    color: #ff0000;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.contato-container{
+    color: black;
+    width: 500px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.372);
+}
 footer {
     background-color: #6e3838;
     color: white;
